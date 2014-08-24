@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="icon" type="image/png" href="http://localhost:8000/static/images/logo-ico.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/white-iphone.png?v=c33749">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/white-ipad.png?v=c33749">
+</head>
+<body>
+<div class="nav-head" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/">
+              <img src="/static/images/logo.png" alt="MoneyBall投资理财"/>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+             <div class="mb-nav-btn">
+                 {% if  request.session.email  %}
+                <ul class="main-nav-parent">
+                    <li>
+                        <a href="#/intro"><span class="navico navico-browse"></span>介绍</a>
+                    </li>
+                    <li>
+                        <a href="/register"><span class="navico navico-signup"></span>注册</a>
+                    </li>
+                    <li>
+                        <a href="/login"><span class="navico navico-signin"></span>登录</a>
+                    </li>
+                    <div id="lavalamp"></div>
+                </ul>
+                 {% else %}
+                    <ul class="main-nav-parent">
+                        <li>
+                         <a href="#/intro"><span class="navico navico-browse"></span>介绍</a>
+                     </li>
+                        <li>
+                            <a href="/register"><span class="navico navico-signup"></span>注册</a>
+                    </li>
+                    <li>
+                        <a href="/login"><span class="navico navico-signin"></span>登录</a>
+                    </li>
+                    <div id="lavalamp"></div>
+                </ul>
+                 {% endif %}
+          </div>
+        </div><!--/.nav-collapse -->
+
+
+      </div>
+    </div>
+</body>
+</html>

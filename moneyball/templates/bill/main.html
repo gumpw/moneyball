@@ -1,0 +1,32 @@
+{% extends "base.html"%}
+
+{% block title %}{{ request.session.nickname }}&nbsp;-&nbsp;个人信息{% endblock %}
+{% block content %}
+    <div class="hq-container">
+        <ul class="hq-breadcrumb">
+	<li>
+		<a href="/"> 首页</a>
+	</li>
+	<li class="divider"> &gt; </li>
+	<li>
+		<a href="/mybill"> 我的记账 </a>
+	</li>
+</ul>
+
+    <div class="spliter-h">
+	<div class="bold"></div>
+</div>
+
+    <div class="main-container">
+        {% include 'left.html' %}
+        <nav class="rigth_content">
+
+            
+
+
+        </nav>
+    </div>
+
+    </div>
+
+{% endblock %}

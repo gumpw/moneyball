@@ -1,0 +1,133 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, img {
+margin: 0;
+padding: 0;
+}
+
+.mb-nav-btn{
+padding: 10px 100pt;
+    float:right;
+}
+
+.mb-nav-btn-login,.mb-nav-btn-reg{
+    width:80px;
+}
+
+#main-back{
+    width:1024px;
+    margin:0 auto;
+}
+
+#w_des {
+position: relative;
+width: auto;
+background: white url(../images/d_bg.gif?1405584144000) repeat-x;
+padding-top: 30px;
+}
+
+#header-container, .container {
+width: 1058px;
+}
+
+.container {
+margin: 0 auto;
+}
+
+.exciting {
+clear: both;
+height: 149px;
+margin-bottom: 14px;
+margin-top: 10px;
+background: url(../images/e_bg.jpg?1405584144000) no-repeat;
+padding-left: 9px;
+}
+
+.e-l {
+height: 149px;
+width: 984px;
+float: left;
+background: url(../images/e_bg.jpg?1405584144000) 0 -149px repeat-x;
+}
+
+.e-r {
+height: 149px;
+width: 9px;
+float: left;
+background: url(../images/e_bg.jpg?1405584144000) 0 -298px no-repeat;
+}
+
+.el-div-1 {
+padding-left: 13px;
+}
+
+.el-div {
+float: left;
+height: 134px;
+padding: 15px 13px 0 18px;
+width: 233px;
+background: url(../images/el_bg.gif?1405584144000) right center no-repeat;
+}
+
+.el-div h3 {
+font-size: 14px;
+color: #424242;
+line-height: 20px;
+height: 24px;
+}
+
+.el-div a {
+color: #757575;
+height: 102px;
+line-height: 20px;
+}
+
+.el-div .el {
+display: block;
+}
+
+
+.el-div a {
+color: #757575;
+height: 102px;
+line-height: 20px;
+}
+
+.el-1 {
+background: url(../images/d1.jpg?1405584144000) right bottom no-repeat;
+}
+
+.el-2 {
+background: url(../images/d2.jpg?1405584144000) right bottom no-repeat;
+}
+
+.el-3 {
+background: url(../images/d3.jpg?1405584144000) right bottom no-repeat;
+}
+
+.el-4 {
+background: url(../images/d4.jpg?1405584144000) right bottom no-repeat;
+}
+
+.el-div h3 a:hover {
+color: #3E6C01;
+}
+
+.el-div h3{
+    font-weight: bold;
+}
+
+.el-div a {
+color: #757575;
+height: 102px;
+line-height: 20px;
+}
+
+.el-div-last {
+background: none;
+}
+
+body {
+font: 12px Tahoma,Helvetica,Arial,'微软雅黑',sans-serif;
+width: 100%;
+margin: 0;
+padding: 0;
+}

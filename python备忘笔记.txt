@@ -1,0 +1,5 @@
+开发moneyball网站时查过的问题：
+
+**字符串查找：find和index，区别在于index找不到会报错，find返回-1
+**Django模板可以继承，真是太棒了。
+

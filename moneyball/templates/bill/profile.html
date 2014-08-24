@@ -1,0 +1,136 @@
+{% extends "base.html"%}
+{% block title %}{{ request.session.nickname }}&nbsp;-&nbsp;个人信息{% endblock %}
+
+
+{% block content %}
+    <div class="hq-container">
+        <ul class="hq-breadcrumb">
+	<li>
+		<a href="/"> 首页</a>
+	</li>
+	<li class="divider"> &gt; </li>
+	<li>
+		<a href="/mybill"> 我的记账 </a>
+	</li>
+</ul>
+
+    <div class="spliter-h">
+	<div class="bold"></div>
+</div>
+
+    <div class="main-container">
+        {% include 'left.html' %}
+        <nav class="rigth_content">
+               <div class="userDisplayInfo clearfix">
+					<div class="txbox fl"><a id="picEdite" href="javascript:openAvata();"></a><img id="iconAvata" src="/static/images/personal/queryUcAvata65.png?type=1&amp;r=0.2332561614457518" class="tx"></div>
+					<div class="safeInfo c66">
+						<p>会员名：<span class="pl5">15901845510</span></p>
+						<div style="height:28px;">
+							<span class="fl">安全等级：</span>
+
+							<div class="bar borderRa3 fl">
+								<div class="ing borderRa3 bgGradeM" style="width:60.00%;"></div>
+							</div>
+							<span class="fl pl15 gold fwB">中</span>
+
+
+							<h2 class="rel fl pl10" style="width:20px;"><a href="#" class="u2_why" style="display:block;"></a>
+								<div class="u2_whyTipBox" style="left: -15px; display: none;">
+									<div class="u2_wtbArrow" style="left:30px;"><span class="upb">◆</span><span class="up">◆</span></div>
+									<div class="u2_wtbMain fs12 cb4" style="width: 140px;">
+										安全提升方式：<br>
+										1、绑定手机<br>
+										2、绑定邮箱<br>
+										3、设置交易密码<br>
+										4、身份认证
+									</div>
+								</div>
+							</h2>
+
+							<div class="clear"></div>
+					 	</div>
+						<p>已绑定银行卡<em id="bankcardCount">2</em>张<a href="#" title="添加银行卡" class="addCard ml10" style="text-indent:10000px;"></a></p>
+					</div>
+				</div>
+            <!--手机及邮箱-->
+            <div class="userPwBind bbe clearfix">
+					<div class="fl bindBox">
+						<div class="phoneBind">
+
+							<div class="c666 pt5">手机<span class="c88 pl10">159****5510</span><a href="/bind/mobile.html" title="修改" class="fr modify">修改</a></div>
+							<div class="c88 pl30 mt5 okBind">已绑定<span class="ml10 cdd">您可享有手机相关的服务</span></div>
+
+						</div>
+					</div>
+					<div class="fl bindBox">
+						<div class="ble pl15">
+							<div class="emailBind">
+
+								<div class="c666 pt5">邮箱</div>
+								<div class="c88 pl30 mt5 noBind">未绑定<a href="/bind/email.html" title="立即绑定" class="fr orange">立即绑定</a></div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+            <div class="userBaseInfo">
+
+					<table width="100%" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<td colspan="4"><div class="clearfix"><span class="fl colorBlock mr10 bgBlockR"></span><strong class="fl c33 f16">用户信息</strong>
+
+								<a id="modifyBaseInfo" href="javascript:void(0);" title="设置" class="fr infoEdit">修改</a><a id="saveBaseInfo" href="javascript:void(0);" class="fr u2_btn ash999 btnHeight ml10 dn"><em class="fl baseEdit"></em><span class="fl">保存</span></a><a id="cancleBaseInfo" href="javascript:void(0);" class="fr u2_btn ash999 btnHeight dn"><em class="fl baseEdit"></em><span class="fl">取消</span></a></div></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th width="80">昵称<span>*</span></th>
+								<td width="320" type="text" id="nickNameTd">贱人</td>
+								<th width="100">籍贯</th>
+								<td type="address" id="homeProvince" provice="131">江苏 淮安</td>
+							</tr>
+							<tr class="even">
+								<th>性别<span>*</span></th>
+								<td type="sex" id="sexTd" checked="M">男</td>
+								<th>常出没</th>
+								 <td type="text" id="frequentedPlaceTd">上海,南京</td>
+							</tr>
+							<tr>
+								<th>生日<span>*</span></th>
+								<td style="z-index:20;" id="dataTime" class="rel" type="dataTime" year="1989" month="10" day="01">1989-10-01
+                            </td>
+								<th>消费偏好</th>
+								<td type="text" id="xiaoFeiPianHaoTd">旅行</td>
+							</tr>
+							<tr class="even">
+								<th>所在地<span style="margin-left:-45px;">*</span></th>
+								<td style="z-index:10;" type="address" id="locationProvince" provice="112">上海 杨浦
+                            </td>
+								<th>邮箱</th>
+								<td id="emailAddressTd" type="text">out_lier@126.com</td>
+							</tr>
+							<tr>
+								<th>姓名</th>
+								<td type="text" id="realNameTd"></td>
+								<th>收入水平</th>
+								<td id="incomeTd" type="short">20000元以上</td>
+							</tr>
+							<tr class="even">
+								<th>介绍</th>
+								<td colspan="3" id="selfIntroductionTd" type="textarea">生而为人，我很抱歉</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+        </nav>
+
+
+    </div>
+    <div style="clear:both;"></div>
+
+    </div>
+
+{% endblock %}

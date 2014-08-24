@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+     <title>MoneyBall 记账管理</title>
+
+    <link rel="icon" type="image/png" href="http://localhost:8000/static/images/logo-ico.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/images/white-iphone.png?v=c33749">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/images/white-ipad.png?v=c33749">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="/static/css/bootstrap-theme.css" type="text/css" >
+
+    <!--公共css文件-->
+    <link rel="stylesheet" href="/static/css/mb.css" type="text/css" >
+</head>
+<body role="document">
+
+    <!-- Fixed navbar -->
+{% include 'head.html' %}
+
+<div id="main" style="margin-top:30px;">
+<div class="hq-container">
+ <div class="front"></div>
+    <div class="row front-box">
+        <div class="span5">
+            <div class="whitebox spaced">
+
+
+    <h2>
+        <i class="ico ico-user"></i>
+        注册
+    </h2>
+
+    <form class="form-full-width" method="post" action="/doReg">{% csrf_token %}
+
+
+
+    <div class="alert alert-danger hide" id="no-cookies">
+        Cookies are not enabled on your browser. Please enable them in your
+        browser's security preferences to login.
+    </div>
+
+
+
+    <a class="btn btn-flacebook btn-connect btn-large" href="https://graph.qq.com/oauth2.0/authorize?response_type=code&client_id=101145635&redirect_uri=http%3A%2F%2Fwww.ferrin.com.cn%2FthirdLogin&state=aaaa" style="width: 90%;">
+        <span class="ico-wrap">
+            <span class="o-ico ico-qq"></span>
+        </span>
+        用qq账号登录
+    </a>
+
+    <div class="interruption row-fluid">
+        <div class="span5"><hr class="dashed"></div>
+        <div class="span2">或者</div>
+        <div class="span5"><hr class="dashed"></div>
+    </div>
+
+
+    <div class="field ">
+        <label for="id_username">邮箱:</label>
+        <input type="text" tabindex="1" name="email" class="inpt-large" placeholder="登录邮箱">
+    </div>
+
+    <div class="field ">
+        <label for="id_password">
+            密码:
+        </label>
+        <input type="password" tabindex="2" name="password" class="inpt-large" placeholder="登录密码">
+    </div>
+          <div class="field ">
+        <label for="id_password">
+            手机号:
+        </label>
+        <input type="text" tabindex="2" name="phone" class="inpt-large" placeholder="手机号">
+    </div>
+
+        <div class="field">
+            <input type="checkbox" name="agree" checked/>我同意 <a href="#" target="_blank">《Moneyball用户服务协议》</a>
+        </div>
+    <br>
+
+    <input type="submit" tabindex="3" value="注册" class="btn-success btn-large">
+
+</form>
+
+
+
+           {% comment %} </div>{% endcomment %}
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+	$('.login-btn').click(function(){
+		$('input[name=checkBoxAgree]').val($("input[name='ischeckagree']:checkbox:checked").length);
+		var $form = $('#login');
+		$form.submit();
+	});
+
+	$('input[name=password]').on("keydown",function(e){
+		if(e.keyCode == 13){
+			$('input[name=checkBoxAgree]').val($("input[name='ischeckagree']:checkbox:checked").length);
+			var $form = $('#login');
+			$form.submit();
+		}
+	});
+</script>
+
+			</div>
+
+</div>
+
+{% include 'bottom.html' %}
+   <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>
